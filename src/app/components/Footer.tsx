@@ -1,5 +1,5 @@
-import { css } from '../../../styled-system/css';
-import { flex } from '../../../styled-system/patterns';
+import { css } from '@styles/css';
+import { flex } from '@styles/patterns';
 
 export function Footer() {
   return (
