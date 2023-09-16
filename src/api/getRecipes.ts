@@ -1,7 +1,9 @@
-import { Recipe } from '@/types';
 import fs from 'fs';
 import path from 'path';
+
 import { parse as parseYAML } from 'yaml';
+
+import type { Recipe } from '@/types';
 
 const fsPromises = fs.promises;
 
