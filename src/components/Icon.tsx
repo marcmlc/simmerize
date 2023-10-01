@@ -20,10 +20,12 @@ const icon = cva({
   },
   variants: {
     variant: {
+      outline: { color: 'main.500', border: '2px solid token(colors.main.400)' },
       light: { bg: 'main.50', color: 'main.500' },
     },
     size: {
-      md: { padding: '2', width: '10', height: '10' },
+      sm: { width: 8, height: 8 },
+      md: { width: 10, height: 10 },
     },
     radius: {
       full: { borderRadius: 'full' },

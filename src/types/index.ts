@@ -4,6 +4,7 @@ export type Recipe = {
   image: string;
   preparationTime: number;
   cookingTime?: number;
+  servings: number;
   nutrition?: {
     calories?: string;
     fibres?: string;

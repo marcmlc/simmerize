@@ -29,7 +29,7 @@ function RecipeIngredient({ children }: { children: React.ReactNode }) {
   return (
     <div className={hstack({ gap: '8' })}>
       <Icon>
-        <IconBaguette />
+        <IconBaguette width={24} />
       </Icon>
       <p className={css({ fontSize: 'md' })}>{children}</p>
     </div>

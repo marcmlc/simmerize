@@ -1,14 +1,13 @@
 import 'server-only';
 
-import { grid, gridItem, vstack } from '@styles/patterns';
+import { css } from '@styles/css';
+import { grid, gridItem } from '@styles/patterns';
 
 import { RecipeDirections } from './RecipeDirections';
+import { RecipeHeader } from './RecipeHeader';
 import { RecipeImage } from './RecipeImage';
 import { RecipeIngredients } from './RecipeIngredients';
-import { RecipeMeta } from './RecipeMeta';
 import { RecipeName } from './RecipeName';
-import { RecipeNutrition } from './RecipeNutrition';
-import { RecipeTags } from './RecipeTags';
 import { Recipe } from '@/types';
 
 type Props = {
@@ -28,22 +27,10 @@ export function Recipe({ recipe }: Props) {
           colSpan: { base: 12, lg: 7 },
           order: { lg: 2 },
         })}>
-        <div
-          className={vstack({
-            alignItems: 'flex-start',
-            gap: { base: 6, lg: 10 },
-          })}>
-          <div>
-            <RecipeName name={recipe.name} />
-            <RecipeTags tags={recipe.tags} />
-          </div>
-          <RecipeMeta cookingTime={recipe.cookingTime} preparationTime={recipe.preparationTime} />
-        </div>
+        <RecipeName name={recipe.name} tags={recipe.tags} />
       </div>
       <div
         className={gridItem({
-          display: 'flex',
-          alignItems: 'center',
           colSpan: { base: 12, lg: 5 },
           rowSpan: { base: 1, lg: 2 },
           order: { lg: 1 },
@@ -55,7 +42,7 @@ export function Recipe({ recipe }: Props) {
           colSpan: { base: 12, lg: 7 },
           order: { lg: 3 },
         })}>
-        <RecipeNutrition nutrition={recipe.nutrition} />
+        <RecipeHeader recipe={recipe} />
       </div>
       <div
         className={gridItem({
