@@ -3,7 +3,15 @@ export type Recipe = {
   slug: string;
   image: string;
   preparationTime: number;
-  cookingTime: number;
+  cookingTime?: number;
+  nutrition?: {
+    calories?: string;
+    fibres?: string;
+    proteines?: string;
+    glucides?: string;
+    sucre?: string;
+    matieresGrasses?: string;
+  };
   ingredients: Ingredient[];
   directions: Direction[];
   tags: Tag[];

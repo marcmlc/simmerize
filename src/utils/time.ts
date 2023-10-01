@@ -3,7 +3,7 @@ export function getTotalTime({
   cookingTime = 0,
 }: {
   preparationTime: number;
-  cookingTime: number;
+  cookingTime?: number;
 }) {
   return preparationTime + cookingTime;
 }

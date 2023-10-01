@@ -7,7 +7,7 @@ import { getTotalTime } from '@/utils/time';
 
 type Props = {
   preparationTime: number;
-  cookingTime: number;
+  cookingTime?: number;
 };
 
 const PLACEHOLDER = '--';
@@ -19,6 +19,7 @@ export function RecipeMeta({ preparationTime, cookingTime }: Props) {
     <div
       className={grid({
         columns: 12,
+        rowGap: 5,
         width: 'full',
         rounded: 'md',
         paddingBlock: '2.5',
@@ -35,7 +36,7 @@ export function RecipeMeta({ preparationTime, cookingTime }: Props) {
   );
 }
 
-function RecipeMetaItem({ time, label, className }: { time: number; label: string; className?: string }) {
+function RecipeMetaItem({ time, label, className }: { time?: number; label: string; className?: string }) {
   return (
     <div
       className={cx(
