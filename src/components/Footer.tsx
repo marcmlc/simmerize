@@ -12,8 +12,7 @@ export function Footer() {
         justifyContent: 'center',
         fontSize: 'sm',
         color: 'gray.500',
-      })}
-    >
+      })}>
       ©️ 2023 Simmerize. Tous droits réservés.
     </div>
   );

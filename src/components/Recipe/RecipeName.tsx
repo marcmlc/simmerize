@@ -14,8 +14,7 @@ export function RecipeName({ name }: Props) {
         fontSize: { base: '4xl', md: '6xl' },
         fontWeight: 700,
         lineHeight: 1.15,
-      })}
-    >
+      })}>
       {name}
     </h1>
   );

@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { flex } from '@styles/patterns';
 
 import { Badge } from '../Badge';
