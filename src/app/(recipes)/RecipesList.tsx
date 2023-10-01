@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { getRecipes } from '@/api/getRecipes';
+import { getRecipes } from '@/utils/recipes';
 
 export async function RecipesList() {
   const recipes = await getRecipes();

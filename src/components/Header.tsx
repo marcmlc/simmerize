@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { css } from '@styles/css';
 import { flex, hstack } from '@styles/patterns';
 
-import icon from '../icon.svg';
+import icon from '../app/icon.svg';
 
 export function Header() {
   return (
