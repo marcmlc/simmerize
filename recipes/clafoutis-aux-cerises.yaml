@@ -15,9 +15,10 @@ ingredients: [
   Liqueur de framboise
 ]
 directions: [
-  'Fouetter les oeufs et le sucre dans un bol puis ajouter 30g de beurre fondu.',
-  'Ajouter ensuite le lait et un peu de liqueur de framboise.',
+  "Fouetter les oeufs et le sucre dans un bol puis ajouter 30g de beurre fondu.",
+  "Ajouter ensuite le lait et un peu de liqueur de framboise.",
   "Ajoutez la farine et la poudre d'amande et mélanger à l'aide d'un fouet.",
-  "Ajouter les cerises (avec ou sans noyaux), verser dans un moule beurré puis parsemer de petites noisettes de beurre et du sachet de sucre vanillé.",
+  "Ajouter les cerises (avec ou sans noyaux) puis verser dans un moule beurré.",
+  "Parsemer de petites noisettes de beurre et du sachet de sucre vanillé.",
   "Enfourner 30 minutes à 220°C."
 ]
