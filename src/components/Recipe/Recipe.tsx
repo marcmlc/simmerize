@@ -74,7 +74,6 @@ export function Recipe({ recipe }: Props) {
           gridRow: { base: '7 / 8', lg: 'auto' },
         })}>
         <RecipeDirections directions={recipe.directions} />
-        <div className={css({ height: '450px' })} />
       </div>
     </div>
   );

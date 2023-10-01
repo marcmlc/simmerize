@@ -4,7 +4,7 @@ import { vstack } from '@styles/patterns';
 
 export function Footer() {
   return (
-    <div
+    <footer
       className={vstack({
         width: '100%',
         height: 12,
@@ -14,6 +14,6 @@ export function Footer() {
         color: 'gray.500',
       })}>
       ©️ 2023 Simmerize. Tous droits réservés.
-    </div>
+    </footer>
   );
 }

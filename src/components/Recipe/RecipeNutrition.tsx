@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { css } from '@styles/css';
 import { circle, hstack, vstack } from '@styles/patterns';
 

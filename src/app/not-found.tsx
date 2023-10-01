@@ -14,7 +14,7 @@ export default function NotFoundPage() {
         justifyContent: 'center',
         backgroundColor: 'main.500',
         // screen height - footer+header+contentPadding
-        height: 'calc(100vh - 10rem)',
+        height: 'calc(100vh - 12rem)',
       })}>
       <p
         className={css({

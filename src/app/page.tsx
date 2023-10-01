@@ -1,12 +1,10 @@
 import 'server-only';
 
-import { RecipesList } from './(recipes)/RecipesList';
+import { RecipeCards } from '@/components/RecipeCards';
+import { getRecipes } from '@/utils/recipes';
 
-export default function RootPage() {
-  return (
-    <main>
-      <h1>Hello Simmerize!</h1>
-      <RecipesList />
-    </main>
-  );
+export default async function RootPage() {
+  const recipes = await getRecipes();
+
+  return <RecipeCards recipes={recipes} />;
 }

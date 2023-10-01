@@ -25,6 +25,7 @@ export function RecipeImage({ image, slug }: { image: string; slug: string }) {
           borderRadius: 'lg',
           objectFit: 'cover',
         })}
+        sizes="(max-width: 1024px) 100vw, 33vw"
       />
     </div>
   );
