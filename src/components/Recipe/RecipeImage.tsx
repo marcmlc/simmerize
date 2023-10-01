@@ -1,14 +1,14 @@
+import 'server-only';
+
 import Image from 'next/image';
 
 import { css } from '@styles/css';
-import { flex } from '@styles/patterns';
 
 export function RecipeImage({ image, slug }: { image: string; slug: string }) {
   return (
     <div
-      className={flex({
+      className={css({
         width: 'full',
-        alignItems: 'center',
         position: 'relative',
         height: { base: '300px', md: '400px', lg: '500px' },
       })}
@@ -18,8 +18,6 @@ export function RecipeImage({ image, slug }: { image: string; slug: string }) {
         src={image}
         alt={slug}
         className={css({
-          width: 'full',
-          height: 'full',
           borderRadius: 'lg',
           objectFit: 'cover',
         })}

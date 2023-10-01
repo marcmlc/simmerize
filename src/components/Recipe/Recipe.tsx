@@ -5,6 +5,7 @@ import { grid, gridItem } from '@styles/patterns';
 import { RecipeDirections } from './RecipeDirections';
 import { RecipeImage } from './RecipeImage';
 import { RecipeIngredients } from './RecipeIngredients';
+import { RecipeName } from './RecipeName';
 import { Recipe } from '@/types';
 
 type Props = {
@@ -16,13 +17,22 @@ export function Recipe({ recipe }: Props) {
     <div
       className={grid({
         columns: 12,
-        rowGap: { base: 8, lg: 12 },
+        rowGap: { base: 6, lg: 12 },
         columnGap: { base: 0, lg: 20 },
       })}
     >
       <div
         className={gridItem({
-          colSpan: { base: 12 },
+          colSpan: { base: 12, lg: 7 },
+          order: { lg: 2 },
+        })}
+      >
+        <RecipeName name={recipe.name} />
+      </div>
+      <div
+        className={gridItem({
+          colSpan: { base: 12, lg: 5 },
+          order: { lg: 1 },
         })}
       >
         <RecipeImage image={recipe.image} slug={recipe.slug} />
@@ -30,6 +40,7 @@ export function Recipe({ recipe }: Props) {
       <div
         className={gridItem({
           colSpan: { base: 12, lg: 5 },
+          order: { lg: 3 },
         })}
       >
         <RecipeIngredients ingredients={recipe.ingredients} />
@@ -37,6 +48,7 @@ export function Recipe({ recipe }: Props) {
       <div
         className={gridItem({
           colSpan: { base: 12, lg: 7 },
+          order: { lg: 4 },
         })}
       >
         <RecipeDirections directions={recipe.directions} />

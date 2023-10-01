@@ -2,7 +2,7 @@ import 'server-only';
 
 import { notFound } from 'next/navigation';
 
-import { Recipe } from '@/components/Recipe/Recipe';
+import { Recipe } from '@/components/Recipe';
 import { getRecipe, getRecipes } from '@/utils/recipes';
 
 export const dynamicParams = false;

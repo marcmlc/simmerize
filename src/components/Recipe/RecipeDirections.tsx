@@ -12,11 +12,11 @@ type Props = {
 
 export function RecipeDirections({ directions }: Props) {
   return (
-    <div className={vstack({ alignItems: 'stretch', gap: '7' })}>
+    <div className={vstack({ alignItems: 'stretch', gap: '4' })}>
       <h2 className={css({ fontSize: '3xl', fontWeight: 600 })}>
         Instructions
       </h2>
-      <div className={vstack({ alignItems: 'stretch', gap: '6' })}>
+      <div className={vstack({ alignItems: 'stretch', gap: '5' })}>
         {directions.map((direction, index) => (
           <div key={index} className={hstack({ gap: '8' })}>
             <RecipeDirectionIcon>{index + 1}</RecipeDirectionIcon>
