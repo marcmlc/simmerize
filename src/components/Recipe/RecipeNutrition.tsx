@@ -12,13 +12,11 @@ type Props = {
   };
 };
 
-export function RecipeNutrition({ nutrition }: Props) {
-  if (!nutrition) return null;
-
+export function RecipeNutrition({ nutrition = {} }: Props) {
   return (
-    <div className={vstack({ gap: 5, alignItems: 'flex-start', width: 'full' })}>
+    <div className={vstack({ gap: 3, alignItems: 'flex-start', width: 'full' })}>
       <h3 className={css({ fontSize: 'lg' })}>Valeurs nutritionnelles par portion</h3>
-      <div className={hstack({ gap: 5, overflowY: 'scroll', width: 'full' })}>
+      <div className={hstack({ gap: 5, overflowY: 'hidden', width: 'full' })}>
         <RecipeNutritionPill value={nutrition.calories} label="Calories" />
         <RecipeNutritionPill value={nutrition.fibres} label="Fibres" />
         <RecipeNutritionPill value={nutrition.proteines} label="Prot." />

@@ -9,8 +9,13 @@ export function RecipeImage({ image, slug }: { image: string; slug: string }) {
     <div
       className={css({
         width: 'full',
-        position: 'relative',
         height: { base: '300px', md: '400px' },
+        position: { base: 'relative', lg: 'absolute' },
+        lg: {
+          paddingTop: '125%',
+          top: 0,
+          left: 0,
+        },
       })}>
       <Image
         fill
