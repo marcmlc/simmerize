@@ -4,26 +4,29 @@ import { ReactNode } from 'react';
 
 import { cva, cx, RecipeVariantProps } from '@styles/css';
 
-type IconStyle = RecipeVariantProps<typeof icon>;
+type BadgeStyle = RecipeVariantProps<typeof badge>;
 
-type Props = IconStyle & {
+type Props = BadgeStyle & {
   children: ReactNode;
   className?: string;
 };
 
-const icon = cva({
+const badge = cva({
   base: {
-    display: 'inline-flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexShrink: 0,
+    letterSpacing: 0.25,
+    fontWeight: '700',
+    textTransform: 'uppercase',
   },
   variants: {
     variant: {
       light: { bg: 'main.50', color: 'main.500' },
     },
     size: {
-      md: { padding: '2', width: '10', height: '10' },
+      sm: {
+        paddingInline: '3',
+        paddingBlock: '1',
+        fontSize: { base: 'xs', md: 'sm' },
+      },
     },
     radius: {
       full: { borderRadius: 'full' },
@@ -32,15 +35,15 @@ const icon = cva({
   defaultVariants: {
     variant: 'light',
     radius: 'full',
-    size: 'md',
+    size: 'sm',
   },
 });
 
-export function Icon({ children, className, ...props }: Props) {
+export function Badge({ children, className, ...props }: Props) {
   const { size, variant, radius, ...rest } = props;
 
   return (
-    <div {...rest} className={cx(className, icon({ size, variant, radius }))}>
+    <div {...rest} className={cx(className, badge({ size, variant, radius }))}>
       {children}
     </div>
   );

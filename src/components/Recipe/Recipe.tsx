@@ -6,6 +6,7 @@ import { RecipeDirections } from './RecipeDirections';
 import { RecipeImage } from './RecipeImage';
 import { RecipeIngredients } from './RecipeIngredients';
 import { RecipeName } from './RecipeName';
+import { RecipeTags } from './RecipeTags';
 import { Recipe } from '@/types';
 
 type Props = {
@@ -28,6 +29,7 @@ export function Recipe({ recipe }: Props) {
         })}
       >
         <RecipeName name={recipe.name} />
+        <RecipeTags tags={recipe.tags} />
       </div>
       <div
         className={gridItem({
