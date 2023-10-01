@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { css } from '@styles/css';
 import { hstack, vstack } from '@styles/patterns';
 
@@ -8,7 +10,7 @@ type Props = {
   directions: Direction[];
 };
 
-export function Directions({ directions }: Props) {
+export function RecipeDirections({ directions }: Props) {
   return (
     <div className={vstack({ alignItems: 'stretch', gap: '7' })}>
       <h2 className={css({ fontSize: '3xl', fontWeight: 600 })}>
@@ -17,7 +19,7 @@ export function Directions({ directions }: Props) {
       <div className={vstack({ alignItems: 'stretch', gap: '6' })}>
         {directions.map((direction, index) => (
           <div key={index} className={hstack({ gap: '8' })}>
-            <DirectionIcon>{index + 1}</DirectionIcon>
+            <RecipeDirectionIcon>{index + 1}</RecipeDirectionIcon>
             <p>{direction}</p>
           </div>
         ))}
@@ -26,7 +28,7 @@ export function Directions({ directions }: Props) {
   );
 }
 
-function DirectionIcon({ children }: { children: React.ReactNode }) {
+function RecipeDirectionIcon({ children }: { children: React.ReactNode }) {
   return (
     <Icon>
       <p className={css({ fontWeight: 600 })}>{children}</p>

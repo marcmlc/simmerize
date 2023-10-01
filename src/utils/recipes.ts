@@ -38,11 +38,12 @@ async function readRecipeFile({
 }: {
   fileName: string;
 }): Promise<Recipe> {
+  const slug = fileName.replace('.yaml', '');
   const parsedContent = await fsPromises.readFile(
     `${pathToRecipes}/${fileName}`,
     { encoding: 'utf-8' }
   );
   const recipe = parseYAML(parsedContent) as Recipe;
 
-  return recipe;
+  return { ...recipe, slug };
 }
