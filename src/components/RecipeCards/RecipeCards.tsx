@@ -11,7 +11,7 @@ type Props = {
 
 export function RecipeCards({ recipes }: Props) {
   return (
-    <div className={grid({ columns: { smDown: 1, sm: 2, md: 3, lg: 4 }, columnGap: 5, rowGap: 3 })}>
+    <div className={grid({ columns: { smDown: 1, sm: 2, md: 3, lg: 4 }, columnGap: 6, rowGap: 6 })}>
       {recipes.map(recipe => (
         <RecipeCardComponent key={recipe.slug} recipe={recipe} />
       ))}

@@ -1,4 +1,4 @@
-import 'server-only';
+'use client';
 
 import { ReactNode } from 'react';
 
@@ -20,6 +20,7 @@ const badge = cva({
   variants: {
     variant: {
       light: { bg: 'main.50', color: 'main.500' },
+      dark: { bg: 'main.500', color: 'white' },
     },
     size: {
       md: {

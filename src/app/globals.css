@@ -1,1 +1,5 @@
 @layer reset, base, tokens, recipes, utilities;
+
+h1, h2, h3, p, span, a {
+  color: #444444;
+}

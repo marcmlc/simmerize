@@ -7,7 +7,7 @@ export function Footer() {
     <footer
       className={vstack({
         width: '100%',
-        height: 12,
+        height: 20,
         borderTop: '2px solid token(colors.main.500)',
         justifyContent: 'center',
         fontSize: 'sm',

@@ -1,6 +1,7 @@
 import 'server-only';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { css } from '@styles/css';
 import { flex, hstack } from '@styles/patterns';
@@ -27,7 +28,7 @@ export function Header() {
             marginInline: 'auto',
             borderBottom: '2px solid token(colors.main.500)',
           })}>
-          <a href="/" className={hstack({ gap: 6 })}>
+          <Link href="/" className={hstack({ gap: 6 })}>
             <Image src={icon} alt="simmerize icon" width={50} />
             <span
               className={css({
@@ -36,7 +37,7 @@ export function Header() {
               })}>
               Simmerize
             </span>
-          </a>
+          </Link>
         </div>
       </div>
       <div className={css({ height: 20 })} />

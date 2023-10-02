@@ -6,28 +6,22 @@ import { css } from '@styles/css';
 
 type Props = { image: string; slug: string };
 
-export function RecipeImage({ image, slug }: Props) {
+export function RecipeCardImage({ image, slug }: Props) {
   return (
     <div
       className={css({
         width: 'full',
-        height: { base: '300px', md: '400px' },
-        position: { base: 'relative', lg: 'absolute' },
-        lg: {
-          paddingTop: '125%',
-          top: 0,
-          left: 0,
-        },
+        position: 'relative',
+        height: '200px',
       })}>
       <Image
         fill
         src={image}
         alt={slug}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         className={css({
-          borderRadius: 'lg',
           objectFit: 'cover',
         })}
-        sizes="(max-width: 1024px) 100vw, 33vw"
       />
     </div>
   );
