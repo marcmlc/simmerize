@@ -15,7 +15,7 @@ type Props = {
 export function RecipeCard({ recipe }: Props) {
   return (
     <a
-      href={`/${recipe.slug}`}
+      href={`/recipes/${recipe.slug}`}
       className={css({
         overflow: 'hidden',
         borderRadius: 'lg',
