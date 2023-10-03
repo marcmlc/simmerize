@@ -1,4 +1,5 @@
 import { IconChevronLeft } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
@@ -14,6 +15,8 @@ type Props = {
 export default function RecipeLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
+  const t = useTranslations('Recipe');
+
   return (
     <div>
       <div className={flex({ paddingBlock: 4 })}>
@@ -23,7 +26,7 @@ export default function RecipeLayout({ children, params: { locale } }: Props) {
             size="sm"
             className={hstack({ gap: 0, alignItems: 'center', borderColor: 'gray.300', color: 'gray.500' })}>
             <IconChevronLeft size={18} />
-            Retour aux recettes
+            {t('back')}
           </Badge>
         </Link>
       </div>

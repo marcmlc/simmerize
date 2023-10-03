@@ -3,21 +3,43 @@
     "title": "Simmerize",
     "description": "Un recueil de recettes délicieuses !"
   },
-  "Languages": {
-    "action": "Choisissez votre langue",
-    "fr": "Français",
-    "en": "Anglais"
+  "Footer": {
+    "copyrights": "©️ 2023 Simmerize. Tous droits réservés.",
+    "Languages": {
+      "action": "Choisissez votre langue",
+      "fr": "Français",
+      "en": "Anglais"
+    }
   },
   "Recipes": {
     "title": "Recettes"
   },
   "Recipe": {
+    "back": "retour aux recettes",
     "Tag": {
       "all": "Toutes",
       "facile": "Facile",
       "dessert": "Dessert",
       "dejeuner": "Déjeuner",
       "diner": "Diner"
-    }
+    },
+    "preparationTime": "préparation",
+    "cookingTime": "cuisson",
+    "totalTime": "total",
+    "servings": "Cette recette sert <important>{count, plural, =0 {personne} =1 {personne} other {# personnes}}</important>.",
+    "Nutrition": {
+      "title": "Valeurs nutritionnelles par portion",
+      "calories": "Calories",
+      "fiber": "Fibres",
+      "protein": "Prot.",
+      "carbs": "Gluc.",
+      "sugar": "Sucre",
+      "fats": "M.G."
+    },
+    "ingredients": "ingrédients",
+    "directions": "instructions"
+  },
+  "Time": {
+    "minute": "{count, plural, =0 {minute} =1 {minute} other {minutes}}"
   }
 }

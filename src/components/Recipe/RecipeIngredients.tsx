@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { IconBaguette } from '@tabler/icons-react';
+import { useTranslations } from 'next-intl';
 
 import { css } from '@styles/css';
 import { hstack, vstack } from '@styles/patterns';
@@ -13,6 +14,8 @@ type Props = {
 };
 
 export function RecipeIngredients({ ingredients }: Props) {
+  const t = useTranslations('Recipe');
+
   return (
     <div
       className={vstack({
@@ -24,7 +27,7 @@ export function RecipeIngredients({ ingredients }: Props) {
           top: 32,
         },
       })}>
-      <h2 className={css({ fontSize: '3xl', fontWeight: 600 })}>Ingrédients</h2>
+      <h2 className={css({ fontSize: '3xl', fontWeight: 600, textTransform: 'capitalize' })}>{t('ingredients')}</h2>
       <div className={vstack({ alignItems: 'stretch', gap: '5' })}>
         {ingredients.map((ingredient, index) => (
           <RecipeIngredient key={index}>{ingredient}</RecipeIngredient>

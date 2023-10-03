@@ -5,7 +5,7 @@ import { css } from '@styles/css';
 import { hstack, vstack } from '@styles/patterns';
 
 export function LocaleSwitch() {
-  const t = useTranslations('Languages');
+  const t = useTranslations('Footer.Languages');
 
   return (
     <div className={vstack({ fontSize: 'sm', alignItems: 'flex-start' })}>

@@ -1,11 +1,15 @@
 import 'server-only';
 
+import { useTranslations } from 'next-intl';
+
 import { css } from '@styles/css';
 import { hstack } from '@styles/patterns';
 
 import { LocaleSwitch } from './LocaleSwitch';
 
 export function Footer() {
+  const t = useTranslations('Footer');
+
   return (
     <footer
       className={hstack({
@@ -20,7 +24,7 @@ export function Footer() {
           fontSize: 'sm',
           color: 'gray.500',
         })}>
-        ©️ 2023 Simmerize. Tous droits réservés.
+        {t('copyrights')}
       </p>
     </footer>
   );
