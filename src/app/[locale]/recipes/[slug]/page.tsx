@@ -18,7 +18,6 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   return await Promise.all(
     locales.map(async locale => {
-      console.log(locale);
       const recipes = await getRecipes({ locale });
 
       return recipes.map(recipe => ({
