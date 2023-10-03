@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 export default async function RecipeTagPage({ params: { slug, locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const recipes = await getRecipes();
+  const recipes = await getRecipes({ locale });
   const filteredRecipes = recipes.filter(recipe => recipe.tags.includes(slug as Tag));
 
   return <RecipeCards recipes={filteredRecipes} />;

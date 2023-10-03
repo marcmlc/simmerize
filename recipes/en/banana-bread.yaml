@@ -1,0 +1,25 @@
+name: Banana Bread
+preparationTime: 10
+cookingTime: 35
+image: /banana-bread.jpg
+tags: [dessert, facile]
+servings: 4
+ingredients: [
+  200g of flour,
+  150g of brown sugar,
+  3 ripe bananas,
+  30g of butter,
+  1/2 packet of baking powder,
+  1 egg,
+  100ml of milk,
+  A pinch of cinnamon,
+  2 drops of vanilla extract
+]
+directions: [
+  "In a mixing bowl, combine the flour with the baking powder.",
+  "Add the brown sugar, egg, melted butter, cinnamon, and vanilla extract, then gradually add the milk.",
+  "Next, mash the bananas in a separate bowl.",
+  "Incorporate the mashed bananas into the mixture and whisk until the batter is smooth.",
+  "Pour the batter into a greased and floured loaf pan.",
+  "Bake for 35 to 40 minutes at 180°C."
+]
