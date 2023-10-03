@@ -1,5 +1,7 @@
 import 'server-only';
 
+import { useTranslations } from 'next-intl';
+
 import { css } from '@styles/css';
 import { flex } from '@styles/patterns';
 
@@ -12,6 +14,8 @@ type Props = {
 };
 
 export function RecipeName({ name, tags }: Props) {
+  const t = useTranslations('Recipe.Tag');
+
   return (
     <>
       <h1
@@ -24,7 +28,7 @@ export function RecipeName({ name, tags }: Props) {
       </h1>
       <div className={flex({ width: 'full', columnGap: 5, paddingBlock: '2.5' })}>
         {tags.map((tag, index) => (
-          <Badge key={index}>{tag}</Badge>
+          <Badge key={index}>{t(tag)}</Badge>
         ))}
       </div>
     </>

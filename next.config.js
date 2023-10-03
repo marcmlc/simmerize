@@ -1,19 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/recipes',
-        permanent: true,
-      },
-      {
-        source: '/recipes/tags',
-        destination: '/recipes',
-        permanent: true,
-      },
-    ];
-  },
-};
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-module.exports = nextConfig;
+const withNextIntl = require('next-intl/plugin')();
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+module.exports = withNextIntl(nextConfig);
