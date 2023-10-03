@@ -19,7 +19,7 @@ export function Error({ code, message }: Props) {
         justifyContent: 'center',
         backgroundColor: 'main.500',
         // screen height - footer+header+contentPadding
-        height: 'calc(100vh - 14rem)',
+        height: 'calc(100vh - 17rem)',
       })}>
       <p
         className={css({
