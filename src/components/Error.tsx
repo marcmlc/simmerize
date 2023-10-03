@@ -3,7 +3,12 @@ import 'server-only';
 import { css } from '@styles/css';
 import { vstack } from '@styles/patterns';
 
-export default function NotFoundPage() {
+type Props = {
+  code: number;
+  message: string;
+};
+
+export function Error({ code, message }: Props) {
   return (
     <div
       className={vstack({
@@ -22,14 +27,14 @@ export default function NotFoundPage() {
           color: 'main.100',
           fontSize: { base: '7rem', md: '13rem' },
         })}>
-        404
+        {code}
       </p>
       <p
         className={css({
           color: 'white',
           fontSize: { base: '3xl', md: '4xl' },
         })}>
-        Cette page n&apos;existe pas
+        {message}
       </p>
     </div>
   );

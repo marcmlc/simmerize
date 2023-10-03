@@ -1,0 +1,23 @@
+{
+  "Metadata": {
+    "title": "Simmerize",
+    "description": "Un recueil de recettes délicieuses !"
+  },
+  "Languages": {
+    "action": "Choisissez votre langue",
+    "fr": "Français",
+    "en": "Anglais"
+  },
+  "Recipes": {
+    "title": "Recettes"
+  },
+  "Recipe": {
+    "Tag": {
+      "all": "Toutes",
+      "facile": "Facile",
+      "dessert": "Dessert",
+      "dejeuner": "Déjeuner",
+      "diner": "Diner"
+    }
+  }
+}

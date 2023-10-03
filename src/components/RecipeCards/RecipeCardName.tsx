@@ -1,5 +1,7 @@
 import 'server-only';
 
+import { useTranslations } from 'next-intl';
+
 import { css } from '@styles/css';
 import { flex, vstack } from '@styles/patterns';
 
@@ -12,6 +14,8 @@ type Props = {
 };
 
 export function RecipeCardName({ name, tags }: Props) {
+  const t = useTranslations('Recipe.Tag');
+
   return (
     <div className={vstack({ alignItems: 'flex-start', gap: 2, paddingBlock: 4, paddingInline: 2 })}>
       <h1
@@ -23,7 +27,7 @@ export function RecipeCardName({ name, tags }: Props) {
       <div className={flex({ width: 'full', columnGap: 2 })}>
         {tags.map((tag, index) => (
           <Badge key={index} size="sm">
-            {tag}
+            {t(tag)}
           </Badge>
         ))}
       </div>

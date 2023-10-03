@@ -1,11 +1,19 @@
 import { IconChevronLeft } from '@tabler/icons-react';
-import Link from 'next/link';
+import Link from 'next-intl/link';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { flex, hstack } from '@styles/patterns';
 
 import { Badge } from '@/components/Badge';
 
-export default function RecipeLayout({ children }: { children: React.ReactNode }) {
+type Props = {
+  children: React.ReactNode;
+  params: { locale: string };
+};
+
+export default function RecipeLayout({ children, params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
   return (
     <div>
       <div className={flex({ paddingBlock: 4 })}>
