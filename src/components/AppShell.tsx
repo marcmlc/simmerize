@@ -15,23 +15,13 @@ export function AppShell({ children }: Props) {
   return (
     <div
       className={css({
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'relative',
         marginX: 'auto',
         maxWidth: '8xl',
         width: '90%',
-        height: '100vh',
       })}>
       <Header />
-      <div
-        className={css({
-          width: 'full',
-          height: 'full',
-        })}>
-        <div className={css({ paddingBlock: 8, minHeight: 'calc(100vh - 13rem)' })}>{children}</div>
-        <Footer />
-      </div>
+      <div className={css({ paddingBlock: 8, width: 'full', height: 'full' })}>{children}</div>
+      <Footer />
     </div>
   );
 }
