@@ -10,7 +10,7 @@ import icon from '../app/icon.svg';
 
 export function Header() {
   return (
-    <div className={css({ height: 20 })}>
+    <>
       <div
         className={css({
           height: 20,
@@ -41,6 +41,6 @@ export function Header() {
         </div>
       </div>
       <div className={css({ height: 20 })} />
-    </div>
+    </>
   );
 }

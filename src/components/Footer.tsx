@@ -15,6 +15,7 @@ export function Footer() {
     <footer
       className={flex({
         width: 'full',
+        flex: '0 1',
         paddingTop: 8,
         paddingBottom: 4,
         flexDirection: 'column',

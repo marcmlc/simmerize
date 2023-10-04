@@ -3,6 +3,7 @@ import 'server-only';
 import { ReactNode } from 'react';
 
 import { css } from '@styles/css';
+import { flex } from '@styles/patterns';
 
 import { Footer } from './Footer';
 import { Header } from './Header';
@@ -13,15 +14,19 @@ type Props = {
 
 export function AppShell({ children }: Props) {
   return (
-    <div
-      className={css({
-        marginX: 'auto',
-        maxWidth: '8xl',
-        width: '90%',
-      })}>
+    <>
       <Header />
-      <div className={css({ paddingBlock: 8, width: 'full', height: 'full' })}>{children}</div>
-      <Footer />
-    </div>
+      <div
+        className={flex({
+          flexDirection: 'column',
+          marginX: 'auto',
+          maxWidth: '8xl',
+          width: '90%',
+          height: 'calc(100vh - 5rem)',
+        })}>
+        <div className={css({ flex: '1 1 auto', paddingBlock: 12 })}>{children}</div>
+        <Footer />
+      </div>
+    </>
   );
 }
