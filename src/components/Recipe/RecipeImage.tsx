@@ -27,7 +27,6 @@ export function RecipeImage({ image, slug }: Props) {
           borderRadius: 'lg',
           objectFit: 'cover',
         })}
-        placeholder="blur"
         sizes="(max-width: 1024px) 100vw, 33vw"
       />
     </div>
