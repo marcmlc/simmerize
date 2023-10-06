@@ -1,6 +1,8 @@
 {
   "name": "simmerize",
   "version": "0.1.0",
+  "description": "Tasty recipes in one place, it's Simmerize.",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "prepare": "panda codegen",
