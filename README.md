@@ -8,7 +8,8 @@
 
 1. [About the app](#about-the-app)
 2. [Technologies](#technologies)
-3. [Setup](#setup)
+3. [Roadmap](#roadmap)
+4. [Setup](#setup)
 5. [License](#license)
 
 ## <a name="about-the-app">About the app</a>
@@ -17,8 +18,9 @@ Simmerize brings together all the recipes I love to cook, in one place. Each rec
 
 This blog is available in French and English.
 
-**New recipes are added regularly**!
 This project is not under active development, but new features may be added from time to time.
+
+**New recipes are added regularly**!
 
 ## <a name="technologies">Technologies</a>
 
@@ -30,8 +32,18 @@ This project is not under active development, but new features may be added from
 </p>
 
 <p>This app is deployed with
-<a href="https://vercel.com"><img align="top" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="vercel" /></a>.
+<a href="https://vercel.com"><img align="top" src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="vercel" /></a>
 </p>
+
+## <a name="roadmap">Roadmap</a>
+
+A non-exhaustive list of upcoming features and ideas for further development:
+- [ ] Filter recipes on multiple tags at the same time
+- [ ] Add pagination
+- [ ] Update servings and update ingredients quantities accordingly
+- [ ] Make shopping list from recipes ingredients
+- [ ] Meal plan for the week from recipes
+- [ ] Add a cooking mode
 
 ## <a name="setup">Setup</a>
 
