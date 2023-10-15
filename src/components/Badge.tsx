@@ -19,6 +19,7 @@ const badge = cva({
   },
   variants: {
     variant: {
+      outline: { bg: 'white', border: '1px solid token(colors.main.500)', color: 'main.500' },
       light: { bg: 'main.50', color: 'main.500' },
       dark: { bg: 'main.500', color: 'white' },
     },
