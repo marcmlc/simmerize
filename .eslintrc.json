@@ -23,6 +23,12 @@
         "ignoreDeclarationSort": true
       }
     ],
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
     "import/order": [
       "error",
       {

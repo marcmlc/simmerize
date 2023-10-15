@@ -10,9 +10,8 @@ export function RecipeImage({ image, slug }: { image: string; slug: string }) {
       className={css({
         width: 'full',
         position: 'relative',
-        height: { base: '300px', md: '400px', lg: '500px' },
-      })}
-    >
+        height: { base: '300px', md: '400px' },
+      })}>
       <Image
         fill
         src={image}

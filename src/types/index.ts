@@ -4,7 +4,6 @@ export type Recipe = {
   image: string;
   preparationTime: number;
   cookingTime: number;
-  restTime: number;
   ingredients: Ingredient[];
   directions: Direction[];
   tags: Tag[];
