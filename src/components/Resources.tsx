@@ -12,7 +12,7 @@ export function Resources() {
   return (
     <FooterItem title={t('action')}>
       <div className={hstack({ justifyContent: 'flex-start' })}>
-        <FooterItem.Link href="/">
+        <FooterItem.Link href="https://github.com/marcmlc/simmerize">
           <Icon size="sm">
             <IconBrandGithubFilled />
           </Icon>

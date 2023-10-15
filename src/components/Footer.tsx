@@ -1,16 +1,13 @@
 import 'server-only';
 
-import { useTranslations } from 'next-intl';
-
 import { css } from '@styles/css';
 import { flex } from '@styles/patterns';
 
 import { LocaleSwitch } from './LocaleSwitch';
+import { Resources } from './Resources';
 import { SiteMap } from './SiteMap';
 
 export function Footer() {
-  const t = useTranslations('Footer');
-
   return (
     <footer
       className={flex({
@@ -26,7 +23,7 @@ export function Footer() {
         className={flex({ flexDirection: { base: 'column', md: 'row' }, justifyContent: 'space-around', rowGap: 8 })}>
         <LocaleSwitch />
         <SiteMap />
-        {/* <Resources /> */}
+        <Resources />
       </div>
       <p
         className={css({
@@ -35,7 +32,15 @@ export function Footer() {
           fontSize: 'sm',
           color: 'gray.500',
         })}>
-        {t('copyrights')}
+        ©️ 2023&nbsp;
+        <a
+          href="https://github.com/marcmlc"
+          className={css({
+            color: 'main.400',
+            fontWeight: 500,
+          })}>
+          Marc Mlc
+        </a>
       </p>
     </footer>
   );
