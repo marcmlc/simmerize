@@ -1,0 +1,23 @@
+name: Clafoutis aux cerises
+preparationTime: 10
+cookingTime: 30
+image: /clafoutis-aux-cerises.jpg
+tags: [Dessert, Facile]
+ingredients: [
+  500g de cerises,
+  250ml de lait,
+  180g de farine,
+  100g de poudre d'amande,
+  50g de beurre,
+  3 oeufs,
+  1 sachet de sucre vanillé,
+  1 sachet de sucre blond,
+  Liqueur de framboise
+]
+directions: [
+  'Fouetter les oeufs et le sucre dans un bol puis ajouter 30g de beurre fondu.',
+  'Ajouter ensuite le lait et un peu de liqueur de framboise.',
+  "Ajoutez la farine et la poudre d'amande et mélanger à l'aide d'un fouet.",
+  "Ajouter les cerises (avec ou sans noyaux), verser dans un moule beurré puis parsemer de petites noisettes de beurre et du sachet de sucre vanillé.",
+  "Enfourner 30 minutes à 220°C."
+]
