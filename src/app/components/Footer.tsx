@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { css } from '@styles/css';
 import { flex } from '@styles/patterns';
 
