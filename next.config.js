@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/recipes',
         permanent: true,
       },
+      {
+        source: '/recipes/tags',
+        destination: '/recipes',
+        permanent: true,
+      },
     ];
   },
 };

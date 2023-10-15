@@ -1,8 +1,9 @@
 import 'server-only';
 
 import { css } from '@styles/css';
+import { flex } from '@styles/patterns';
 
-import { RecipeTags } from './RecipeTags';
+import { Badge } from '../Badge';
 import { Tag } from '@/types';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
 
 export function RecipeName({ name, tags }: Props) {
   return (
-    <div>
+    <>
       <h1
         className={css({
           fontSize: { base: '4xl', md: '6xl' },
@@ -21,7 +22,11 @@ export function RecipeName({ name, tags }: Props) {
         })}>
         {name}
       </h1>
-      <RecipeTags tags={tags} />
-    </div>
+      <div className={flex({ width: 'full', columnGap: 5, paddingBlock: '2.5' })}>
+        {tags.map((tag, index) => (
+          <Badge key={index}>{tag}</Badge>
+        ))}
+      </div>
+    </>
   );
 }

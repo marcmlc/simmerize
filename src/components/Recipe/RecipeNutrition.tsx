@@ -24,7 +24,7 @@ export function RecipeNutrition({ nutrition = {} }: Props) {
         <RecipeNutritionPill value={nutrition.proteines} label="Prot." />
         <RecipeNutritionPill value={nutrition.glucides} label="Gluc." />
         <RecipeNutritionPill value={nutrition.sucre} label="Sucre" />
-        <RecipeNutritionPill value={nutrition.matieresGrasses} label="Mat. G." />
+        <RecipeNutritionPill value={nutrition.matieresGrasses} label="M.G." />
       </div>
     </div>
   );
