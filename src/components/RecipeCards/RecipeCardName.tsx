@@ -17,7 +17,7 @@ export function RecipeCardName({ name, tags }: Props) {
   const t = useTranslations('Recipe.Tag');
 
   return (
-    <div className={vstack({ alignItems: 'flex-start', gap: 2, paddingBlock: 4, paddingInline: 2 })}>
+    <div className={vstack({ alignItems: 'flex-start', gap: 4, paddingBlock: 4, paddingInline: 2 })}>
       <h1
         className={css({
           fontSize: 'xl',
