@@ -1,20 +1,15 @@
 export type Recipe = {
-  slug: string;
   name: string;
   preparationTime: number;
   cookingTime: number;
   restTime: number;
   ingredients: Ingredient[];
-  steps: Step[];
+  directions: Direction[];
   tags: Tag[];
 };
 
-export type Ingredient = {
-  name: string;
-  details?: string;
-  quantity?: number;
-  unit?: string;
-};
-
-export type Step = string;
+export type Ingredient = string;
+export type Direction = string;
 export type Tag = string;
+
+export type RecipeCard = Pick<Recipe, 'name'> & { slug: string };

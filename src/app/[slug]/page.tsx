@@ -2,7 +2,7 @@ import 'server-only';
 
 import { notFound } from 'next/navigation';
 
-import { getRecipes } from '@/api/getRecipes';
+import { getRecipe, getRecipes } from '@/utils/recipes';
 
 export const dynamicParams = false;
 
@@ -19,9 +19,7 @@ export default async function RecipePage({
 }: {
   params: { slug: string };
 }) {
-  const recipes = await getRecipes();
-
-  const recipe = recipes.find((recipe) => recipe.slug === params.slug);
+  const recipe = await getRecipe({ slug: params.slug });
   if (!recipe) return notFound();
 
   return <div>Recipe: {recipe.name}</div>;
