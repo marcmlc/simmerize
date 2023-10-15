@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { css, cx } from '@styles/css';
 import { grid, gridItem } from '@styles/patterns';
 

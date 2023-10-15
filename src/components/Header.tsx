@@ -18,8 +18,7 @@ export function Header() {
           insetInline: 0,
           insetBlockStart: 0,
           backgroundColor: 'white',
-        })}
-      >
+        })}>
         <div
           className={flex({
             height: 'full',
@@ -27,16 +26,14 @@ export function Header() {
             maxWidth: '8xl',
             marginInline: 'auto',
             borderBottom: '2px solid token(colors.main.500)',
-          })}
-        >
+          })}>
           <a href="/" className={hstack({ gap: 6 })}>
             <Image src={icon} alt="simmerize icon" width={50} />
             <span
               className={css({
                 fontWeight: 700,
                 fontSize: '3xl',
-              })}
-            >
+              })}>
               Simmerize
             </span>
           </a>

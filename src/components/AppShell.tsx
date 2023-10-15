@@ -22,15 +22,13 @@ export function AppShell({ children }: Props) {
         maxWidth: '8xl',
         width: '90%',
         height: '100vh',
-      })}
-    >
+      })}>
       <Header />
       <div
         className={css({
           width: 'full',
           height: 'full',
-        })}
-      >
+        })}>
         <div className={css({ paddingBlock: 4 })}>{children}</div>
         <Footer />
       </div>

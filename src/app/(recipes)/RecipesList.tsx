@@ -7,7 +7,7 @@ export async function RecipesList() {
 
   return (
     <ul>
-      {recipes.map((recipe) => (
+      {recipes.map(recipe => (
         <li key={recipe.slug}>
           <a href={`/${recipe.slug}`}>{recipe.name}</a>
         </li>
