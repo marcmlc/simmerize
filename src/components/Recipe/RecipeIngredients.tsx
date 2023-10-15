@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { IconBaguette } from '@tabler/icons-react';
+import { IconChefHat } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 
 import { css } from '@styles/css';
@@ -41,7 +41,7 @@ function RecipeIngredient({ children }: { children: React.ReactNode }) {
   return (
     <div className={hstack({ gap: '8' })}>
       <Icon>
-        <IconBaguette width={24} />
+        <IconChefHat width={24} />
       </Icon>
       <p className={css({ fontSize: 'md' })}>{children}</p>
     </div>
