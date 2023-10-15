@@ -29,7 +29,7 @@ export function RecipeDirections({ directions }: Props) {
 function RecipeDirectionIcon({ children }: { children: React.ReactNode }) {
   return (
     <Icon>
-      <p className={css({ fontWeight: 600 })}>{children}</p>
+      <p className={css({ fontWeight: 600, fontSize: 'lg' })}>{children}</p>
     </Icon>
   );
 }
