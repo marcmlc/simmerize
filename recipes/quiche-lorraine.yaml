@@ -1,0 +1,34 @@
+name: Quiche Lorraine
+preparationTime: 10
+cookingTime: 30
+tags:
+  - Déjeuner
+  - Diner
+  - Facile
+steps:
+  - Préchauffer le four à 180°C (thermostat 6).
+  - Étaler la pâte dans un moule.
+  - Battre les oeufs, la crême fraiche et une poignée de fromage râpé ensemble.
+  - Faire cuire les lardons à la poêle et les ajouter au mélange.
+  - Assaisonner de sel, poivre et ajouter une pincée de muscade.
+  - Verser le mélange sur la pâte et recouvrir de fromage râpé.
+  - Mettre au four pendant 40 à 50 mins.
+ingredients:
+  - name: Pâte Brisée
+    quantity: 1
+  - name: Crême Liquide
+    details: 18% de matière grasse
+    quantity: 20
+    unit: cl
+  - name: Oeuf
+    quantity: 4
+  - name: Lardons
+    details: Natures ou fumés
+    quantity: 250
+    unit: g
+  - name: Fromage râpé
+    quantity: 50
+    unit: g
+  - name: Muscade
+  - name: Sel
+  - name: Poivre
