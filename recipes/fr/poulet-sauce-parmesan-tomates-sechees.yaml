@@ -1,0 +1,32 @@
+name: Poulet sauce crémeuse au parmesan et tomates séchées
+preparationTime: 10
+cookingTime: 10
+image: /poulet-sauce-parmesan-tomates-sechees.jpg
+tags: [dejeuner, diner, facile]
+servings: 4
+ingredients: [
+  750g de blancs de poulet
+  Une dizaine de tomates séchées,
+  Huile (provenant du bocal des tomates séchées si possible),
+  2 gousses d'ail,
+  12.5cl de vin blanc,
+  18.5cl de bouillon de poulet,
+  18.5cl de crème épaisse
+  30g de parmesan (copeaux ou poudre),
+  2 cuillères à café de moutarde
+  Basilic (frais ou séché)
+  Sel,
+  Poivre
+]
+directions: [
+  "Couper les blancs de poulet horizontalement en deux pour les rendre plus fins. 
+    Il est également possible de les couper en morceaux plus petits.",
+  "Assaisonner les blancs de sel et de poivre. Faire chauffer l'huile dans une poêle.",
+  "Faire cuire les blancs dans l'huile jusqu'à bien dorés. Les réserver.",
+  "Faire revenir l'ail dans la poêle environ 15 secondes jusqu'à doré.",
+  "Ajouter le vin blanc et faire bouillir 1 minute pour évaporer l'alcool, tout en mélangeant bien.",
+  "Mélanger la moutarde, puis ajouter le bouillon, la crème, le parmesan et les tomates.",
+  "Laisser mijoter pendant 2 à 3 minutes à feu moyen, en remuant régulièrement.",
+  "Ajuster l'assaisonnement en sel et poivre si nécessaire. Ajouter le basilic (frais en feuilles ou séché).",
+  "Ajoute les blancs de poulet dans la sauce et laisser mijoter pendant 1 ou 2 minutes de plus.",
+]
