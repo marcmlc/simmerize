@@ -1,0 +1,24 @@
+name: Banana bread
+preparationTime: 10
+cookingTime: 35
+image: /banana-bread.jpg
+tags: [Dessert, Facile]
+ingredients: [
+  200g de farine,
+  150g de cassonade,
+  3 bananes bien mûres,
+  30g de beurre,
+  1/2 paquet de levure chimique,
+  1 oeuf,
+  10cl de lait,
+  Une pincée de cannelle,
+  2 gouttes d'extrait de vanille,
+]
+directions: [
+  "Dans un saladier, mélanger la farine à la levure.",
+  "Ajouter la cassonade, l'oeuf, le beurre fondu, la cannelle, l'extrait de vanille puis petit à petit le lait.",
+  "Ensuite, écraser les bananes dans un bol à part.",
+  "Incorporer les bananes écrasées au mélange et fouetter la préparation jusqu'à ce qu'elle soit homogène.",
+  "Verser la préparation dans un moule à cake beurré et fariné.",
+  "Cuire le tout 35 à 40 minutes à 180°C."
+]
