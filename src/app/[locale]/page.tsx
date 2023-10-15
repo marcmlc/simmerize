@@ -1,5 +1,11 @@
-import { redirect } from 'next-intl/server';
+'use client';
+
+import { useEffect } from 'react';
+
+import { useRouter } from '@/navigation';
 
 export default function LocalePage() {
-  redirect('/recipes');
+  const router = useRouter();
+
+  useEffect(() => router.push('/recipes'), [router]);
 }
