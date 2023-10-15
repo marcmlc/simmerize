@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-import { css } from '@styles/css';
 import { flex, hstack } from '@styles/patterns';
 
 import { Badge } from '@/components/Badge';
@@ -19,7 +18,7 @@ export default function RecipeLayout({ children, params: { locale } }: Props) {
   const t = useTranslations('Recipe');
 
   return (
-    <div className={css({ height: 'full' })}>
+    <>
       <div className={flex({ paddingBlock: 4 })}>
         <Link href="/recipes">
           <Badge
@@ -32,6 +31,6 @@ export default function RecipeLayout({ children, params: { locale } }: Props) {
         </Link>
       </div>
       {children}
-    </div>
+    </>
   );
 }
