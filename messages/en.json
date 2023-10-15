@@ -12,7 +12,8 @@
     }
   },
   "Recipes": {
-    "title": "Recipes"
+    "title": "Recipes",
+    "empty": "No recipes here"
   },
   "Recipe": {
     "back": "back to recipes",

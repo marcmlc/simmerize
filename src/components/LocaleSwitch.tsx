@@ -1,7 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next-intl/link';
 
-import { css } from '@styles/css';
+import { css, cva } from '@styles/css';
 import { flex, hstack } from '@styles/patterns';
 
 export function LocaleSwitch() {
@@ -18,13 +18,30 @@ export function LocaleSwitch() {
       })}>
       <p className={css({ fontWeight: 600 })}>🌍 {t('action')}</p>
       <div className={hstack()}>
-        <Link href="/" locale="fr" className={css()}>
-          <span>{t('fr')}</span>
-        </Link>
-        <Link href="/" locale="en" className={css()}>
-          <span>{t('en')}</span>
-        </Link>
+        <LocaleLink locale="fr" />
+        <LocaleLink locale="en" />
       </div>
     </div>
+  );
+}
+
+const localeLink = cva({
+  variants: {
+    selected: {
+      true: {
+        textDecoration: 'underline',
+      },
+    },
+  },
+});
+
+function LocaleLink({ locale }: { locale: string }) {
+  const t = useTranslations('Footer.Languages');
+  const selectedLocale = useLocale();
+
+  return (
+    <Link href="/" locale={locale} className={localeLink({ selected: selectedLocale === locale })}>
+      <span>{t(locale)}</span>
+    </Link>
   );
 }

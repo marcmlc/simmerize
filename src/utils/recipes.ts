@@ -6,15 +6,14 @@ import { parse as parseYAML } from 'yaml';
 import type { Recipe, RecipeCard } from '@/types';
 
 const fsPromises = fs.promises;
-const pathToRecipes = path.join(process.cwd(), 'recipes');
 
-export const getRecipes = async (): Promise<RecipeCard[]> => {
-  const recipes = await fsPromises.readdir(pathToRecipes);
+export const getRecipes = async ({ locale }: { locale: string }): Promise<RecipeCard[]> => {
+  const recipes = await fsPromises.readdir(getPathToRecipes({ locale }));
 
   return await Promise.all(
     recipes.map(async fileName => {
       const slug = fileName.replace('.yaml', '');
-      const recipe = await readRecipeFile({ fileName });
+      const recipe = await readRecipeFile({ fileName, locale });
 
       return {
         slug,
@@ -26,15 +25,19 @@ export const getRecipes = async (): Promise<RecipeCard[]> => {
   );
 };
 
-export const getRecipe = async ({ slug }: { slug: string }): Promise<Recipe> => {
+export const getRecipe = async ({ slug, locale }: { slug: string; locale: string }): Promise<Recipe> => {
   const fileName = `${slug}.yaml`;
-  return readRecipeFile({ fileName });
+  return readRecipeFile({ fileName, locale });
 };
 
-async function readRecipeFile({ fileName }: { fileName: string }): Promise<Recipe> {
+async function readRecipeFile({ fileName, locale }: { fileName: string; locale: string }): Promise<Recipe> {
   const slug = fileName.replace('.yaml', '');
-  const parsedContent = await fsPromises.readFile(`${pathToRecipes}/${fileName}`, { encoding: 'utf-8' });
+  const parsedContent = await fsPromises.readFile(`${getPathToRecipes({ locale })}/${fileName}`, { encoding: 'utf-8' });
   const recipe = parseYAML(parsedContent) as Recipe;
 
   return { ...recipe, slug };
+}
+
+function getPathToRecipes({ locale }: { locale: string }) {
+  return `${path.join(process.cwd(), 'recipes')}/${locale}`;
 }

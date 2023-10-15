@@ -1,0 +1,25 @@
+name: Cherry Clafoutis
+preparationTime: 10
+cookingTime: 30
+image: /clafoutis-aux-cerises.jpg
+tags: [dessert, facile]
+servings: 4
+ingredients: [
+  500g of cherries,
+  250ml of milk,
+  180g of flour,
+  100g of almond powder,
+  50g of butter,
+  3 eggs,
+  1 packet of vanilla sugar,
+  1 packet of light brown sugar,
+  Raspberry liqueur
+]
+directions: [
+  "Whisk the eggs and sugar in a bowl, then add 30g of melted butter.",
+  "Next, add the milk and a little raspberry liqueur.",
+  "Add the flour and almond powder and mix with a whisk.",
+  "Add the cherries (with or without pits) and pour into a buttered dish.",
+  "Sprinkle with small dabs of butter and the packet of vanilla sugar.",
+  "Bake for 30 minutes at 220°C."
+]

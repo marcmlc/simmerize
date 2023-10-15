@@ -3,6 +3,7 @@ import 'server-only';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { Recipe } from '@/components/Recipe';
+import { locales } from '@/navigation';
 import { getRecipe, getRecipes } from '@/utils/recipes';
 
 type Props = {
@@ -15,17 +16,23 @@ type Props = {
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  const recipes = await getRecipes();
+  return await Promise.all(
+    locales.map(async locale => {
+      console.log(locale);
+      const recipes = await getRecipes({ locale });
 
-  return recipes.map(recipe => ({
-    slug: recipe.slug,
-  }));
+      return recipes.map(recipe => ({
+        locale,
+        slug: recipe.slug,
+      }));
+    })
+  );
 }
 
 export default async function RecipePage({ params: { slug, locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const recipe = await getRecipe({ slug });
+  const recipe = await getRecipe({ slug, locale });
 
   return <Recipe recipe={recipe} />;
 }

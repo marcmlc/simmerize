@@ -14,7 +14,7 @@ type Props = {
 export default async function RootPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
-  const recipes = await getRecipes();
+  const recipes = await getRecipes({ locale });
 
   return <RecipeCards recipes={recipes} />;
 }
