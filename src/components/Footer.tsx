@@ -1,19 +1,27 @@
 import 'server-only';
 
-import { vstack } from '@styles/patterns';
+import { css } from '@styles/css';
+import { hstack } from '@styles/patterns';
+
+import { LocaleSwitch } from './LocaleSwitch';
 
 export function Footer() {
   return (
     <footer
-      className={vstack({
+      className={hstack({
         width: '100%',
         height: 20,
         borderTop: '2px solid token(colors.main.500)',
-        justifyContent: 'center',
-        fontSize: 'sm',
-        color: 'gray.500',
+        justifyContent: 'space-between',
       })}>
-      ©️ 2023 Simmerize. Tous droits réservés.
+      <LocaleSwitch />
+      <p
+        className={css({
+          fontSize: 'sm',
+          color: 'gray.500',
+        })}>
+        ©️ 2023 Simmerize. Tous droits réservés.
+      </p>
     </footer>
   );
 }

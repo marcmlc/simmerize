@@ -1,9 +1,16 @@
 import 'server-only';
 
-import { notFound } from 'next/navigation';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
 import { Recipe } from '@/components/Recipe';
 import { getRecipe, getRecipes } from '@/utils/recipes';
+
+type Props = {
+  params: {
+    locale: string;
+    slug: string;
+  };
+};
 
 export const dynamicParams = false;
 
@@ -15,9 +22,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function RecipePage({ params }: { params: { slug: string } }) {
-  const recipe = await getRecipe({ slug: params.slug });
-  if (!recipe) return notFound();
+export default async function RecipePage({ params: { slug, locale } }: Props) {
+  unstable_setRequestLocale(locale);
+
+  const recipe = await getRecipe({ slug });
 
   return <Recipe recipe={recipe} />;
 }
