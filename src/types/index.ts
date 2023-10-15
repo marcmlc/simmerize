@@ -22,4 +22,4 @@ export type Ingredient = string;
 export type Direction = string;
 export type Tag = string;
 
-export type RecipeCard = Pick<Recipe, 'name' | 'slug'>;
+export type RecipeCard = Pick<Recipe, 'name' | 'slug' | 'image' | 'tags'>;

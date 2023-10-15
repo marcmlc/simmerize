@@ -6,7 +6,7 @@ import { cva, cx, RecipeVariantProps } from '@styles/css';
 
 type BadgeStyle = RecipeVariantProps<typeof badge>;
 
-type Props = BadgeStyle & {
+export type BadgeProps = BadgeStyle & {
   children: ReactNode;
   className?: string;
 };
@@ -22,10 +22,15 @@ const badge = cva({
       light: { bg: 'main.50', color: 'main.500' },
     },
     size: {
-      sm: {
+      md: {
         paddingInline: '3',
         paddingBlock: '1',
-        fontSize: { base: 'xs', md: 'sm' },
+        fontSize: { base: 'sm', md: 'sm' },
+      },
+      sm: {
+        paddingInline: '1.5',
+        paddingBlock: '0.5',
+        fontSize: 'xs',
       },
     },
     radius: {
@@ -35,11 +40,11 @@ const badge = cva({
   defaultVariants: {
     variant: 'light',
     radius: 'full',
-    size: 'sm',
+    size: 'md',
   },
 });
 
-export function Badge({ children, className, ...props }: Props) {
+export function Badge({ children, className, ...props }: BadgeProps) {
   const { size, variant, radius, ...rest } = props;
 
   return (

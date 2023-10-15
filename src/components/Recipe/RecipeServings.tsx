@@ -1,3 +1,5 @@
+import 'server-only';
+
 import { IconUsers } from '@tabler/icons-react';
 
 import { css } from '@styles/css';

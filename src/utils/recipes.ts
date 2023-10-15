@@ -19,6 +19,8 @@ export const getRecipes = async (): Promise<RecipeCard[]> => {
       return {
         slug,
         name: recipe.name,
+        image: recipe.image,
+        tags: recipe.tags,
       };
     })
   );
