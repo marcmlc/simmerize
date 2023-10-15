@@ -7,6 +7,7 @@ import { RecipeImage } from './RecipeImage';
 import { RecipeIngredients } from './RecipeIngredients';
 import { RecipeMeta } from './RecipeMeta';
 import { RecipeName } from './RecipeName';
+import { RecipeNutrition } from './RecipeNutrition';
 import { RecipeTags } from './RecipeTags';
 import { Recipe } from '@/types';
 
@@ -41,22 +42,32 @@ export function Recipe({ recipe }: Props) {
       </div>
       <div
         className={gridItem({
+          display: 'flex',
+          alignItems: 'center',
           colSpan: { base: 12, lg: 5 },
+          rowSpan: { base: 1, lg: 2 },
           order: { lg: 1 },
         })}>
         <RecipeImage image={recipe.image} slug={recipe.slug} />
       </div>
       <div
         className={gridItem({
-          colSpan: { base: 12, lg: 5 },
+          colSpan: { base: 12, lg: 7 },
           order: { lg: 3 },
+        })}>
+        <RecipeNutrition nutrition={recipe.nutrition} />
+      </div>
+      <div
+        className={gridItem({
+          colSpan: { base: 12, lg: 5 },
+          order: { lg: 4 },
         })}>
         <RecipeIngredients ingredients={recipe.ingredients} />
       </div>
       <div
         className={gridItem({
           colSpan: { base: 12, lg: 7 },
-          order: { lg: 4 },
+          order: { lg: 5 },
         })}>
         <RecipeDirections directions={recipe.directions} />
       </div>
