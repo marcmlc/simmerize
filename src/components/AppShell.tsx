@@ -29,7 +29,7 @@ export function AppShell({ children }: Props) {
           width: 'full',
           height: 'full',
         })}>
-        <div className={css({ paddingBlock: 8, paddingInline: 4 })}>{children}</div>
+        <div className={css({ paddingBlock: 8 })}>{children}</div>
         <Footer />
       </div>
     </div>
