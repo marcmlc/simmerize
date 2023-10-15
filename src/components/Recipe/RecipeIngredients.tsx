@@ -14,9 +14,9 @@ type Props = {
 
 export function RecipeIngredients({ ingredients }: Props) {
   return (
-    <div className={vstack({ alignItems: 'stretch', gap: '7' })}>
+    <div className={vstack({ alignItems: 'stretch', gap: '4' })}>
       <h2 className={css({ fontSize: '3xl', fontWeight: 600 })}>Ingrédients</h2>
-      <div className={vstack({ alignItems: 'stretch', gap: '6' })}>
+      <div className={vstack({ alignItems: 'stretch', gap: '5' })}>
         {ingredients.map((ingredient, index) => (
           <RecipeIngredient key={index}>{ingredient}</RecipeIngredient>
         ))}
