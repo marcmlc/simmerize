@@ -1,7 +1,10 @@
+import 'server-only';
+
 import { grid, gridItem } from '@styles/patterns';
 
-import { Ingredients } from './Ingredients';
-import { Directions } from './Steps';
+import { RecipeDirections } from './RecipeDirections';
+import { RecipeImage } from './RecipeImage';
+import { RecipeIngredients } from './RecipeIngredients';
 import { Recipe } from '@/types';
 
 type Props = {
@@ -19,17 +22,24 @@ export function Recipe({ recipe }: Props) {
     >
       <div
         className={gridItem({
+          colSpan: { base: 12 },
+        })}
+      >
+        <RecipeImage image={recipe.image} slug={recipe.slug} />
+      </div>
+      <div
+        className={gridItem({
           colSpan: { base: 12, lg: 5 },
         })}
       >
-        <Ingredients ingredients={recipe.ingredients} />
+        <RecipeIngredients ingredients={recipe.ingredients} />
       </div>
       <div
         className={gridItem({
           colSpan: { base: 12, lg: 7 },
         })}
       >
-        <Directions directions={recipe.directions} />
+        <RecipeDirections directions={recipe.directions} />
       </div>
     </div>
   );
