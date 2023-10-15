@@ -3,7 +3,7 @@ import 'server-only';
 import { useTranslations } from 'next-intl';
 
 import { css } from '@styles/css';
-import { hstack } from '@styles/patterns';
+import { flex } from '@styles/patterns';
 
 import { LocaleSwitch } from './LocaleSwitch';
 
@@ -12,11 +12,15 @@ export function Footer() {
 
   return (
     <footer
-      className={hstack({
-        width: '100%',
-        height: 20,
+      className={flex({
+        width: 'full',
+        height: 32,
+        paddingTop: 4,
+        paddingBottom: 8,
+        flexDirection: { base: 'column', md: 'row' },
         borderTop: '2px solid token(colors.main.500)',
-        justifyContent: 'space-between',
+        justifyContent: { base: 'space-around', md: 'space-between' },
+        alignItems: 'center',
       })}>
       <LocaleSwitch />
       <p
