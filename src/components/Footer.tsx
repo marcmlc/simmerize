@@ -6,6 +6,7 @@ import { css } from '@styles/css';
 import { flex } from '@styles/patterns';
 
 import { LocaleSwitch } from './LocaleSwitch';
+import { SiteMap } from './SiteMap';
 
 export function Footer() {
   const t = useTranslations('Footer');
@@ -14,17 +15,22 @@ export function Footer() {
     <footer
       className={flex({
         width: 'full',
-        height: 32,
-        paddingTop: 4,
-        paddingBottom: 8,
-        flexDirection: { base: 'column', md: 'row' },
+        paddingTop: 8,
+        paddingBottom: 4,
+        flexDirection: 'column',
         borderTop: '2px solid token(colors.main.500)',
-        justifyContent: { base: 'space-around', md: 'space-between' },
-        alignItems: 'center',
+        rowGap: 10,
       })}>
-      <LocaleSwitch />
+      <div
+        className={flex({ flexDirection: { base: 'column', md: 'row' }, justifyContent: 'space-around', rowGap: 8 })}>
+        <LocaleSwitch />
+        <SiteMap />
+        {/* <Resources /> */}
+      </div>
       <p
         className={css({
+          textAlign: 'center',
+          width: 'full',
           fontSize: 'sm',
           color: 'gray.500',
         })}>

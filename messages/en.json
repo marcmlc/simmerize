@@ -9,6 +9,14 @@
       "action": "Choose your language",
       "fr": "French",
       "en": "English"
+    },
+    "SiteMap": {
+      "action": "Sitemap",
+      "home": "Home",
+      "recipes": "Recipes"
+    },
+    "Resources": {
+      "action": "Resources"
     }
   },
   "Recipes": {

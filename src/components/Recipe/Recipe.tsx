@@ -21,6 +21,7 @@ export function Recipe({ recipe }: Props) {
     <div
       className={grid({
         columns: 12,
+        height: 'full',
         rowGap: { base: 12, lg: 14 },
         columnGap: { base: 0, lg: 24 },
       })}>
@@ -63,7 +64,7 @@ export function Recipe({ recipe }: Props) {
       <div
         className={css({
           gridColumn: { base: '1 / 13', lg: '1 / 6' },
-          gridRow: { base: '6 / 7', lg: '1 / 8' },
+          gridRow: { base: '6 / 7', lg: '1 / 6' },
           lg: { position: 'relative' },
         })}>
         <RecipeIngredients ingredients={recipe.ingredients} />

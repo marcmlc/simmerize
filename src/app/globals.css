@@ -1,7 +1,7 @@
 @layer reset, base, tokens, recipes, utilities;
 
 @layer reset { 
-  h1, h2, h3, p, span, a {
+  body {
     color: #444444;
   }
 }

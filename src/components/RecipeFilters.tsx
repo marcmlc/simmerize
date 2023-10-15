@@ -13,7 +13,7 @@ export function RecipeFilters({ children }: { children: React.ReactNode }) {
   return (
     <div
       className={flex({
-        rowGap: 8,
+        rowGap: 20,
         flexDirection: 'column',
       })}>
       <div

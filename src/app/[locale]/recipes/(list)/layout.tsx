@@ -18,7 +18,7 @@ export default function RecipesLayout({ children, params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
 
   return (
-    <div className={flex({ flexDirection: 'column', gap: 12 })}>
+    <div className={flex({ flexDirection: 'column', gap: 6 })}>
       <h1
         className={css({
           textAlign: 'center',
