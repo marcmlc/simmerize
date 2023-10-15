@@ -1,0 +1,27 @@
+name: Curry d'épinards & pois chiches au lait de coco
+preparationTime: 20
+cookingTime: 15
+image: /curry-pois-chiches-epinards-lait-coco.jpg
+tags: [dejeuner, diner, facile]
+servings: 4
+ingredients: [
+  250g d'épinards frais,
+  350g de purée de tomate,
+  350g de pois chiches,
+  20cl de lait de coco,
+  1 oignon,
+  2 gousses d'ail,
+  2 c.à.c. de curry en poudre,
+  1 c.à.c. de curcuma en poudre,
+  Huile d'olive,
+  Sel,
+  Poivre
+]
+directions: [
+  "Éplucher et émincer l’oignon et les gousses d’ail. Laver les feuilles d’épinards.",
+  "Faire chauffer l’huile. Ajouter les épices et remuez pendant 1 minute pour libérer tous les arômes",
+  "Incorporer l’oignon puis l’ail et faire revenir l’ensemble pendant 2-3 minutes. Verser un fond d’eau si besoin.",
+  "Incorporer la purée de tomates, le lait de coco et le sel. Porter l’ensemble à ébullition.",
+  "Ajouter les pois chiches, réduire le feu et laisser mijoter environ 10 minutes.",
+  "Ajouter ensuite les feuilles d’épinards et poursuivre la cuisson 5 minutes."
+]
