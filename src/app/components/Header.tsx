@@ -1,8 +1,10 @@
 import 'server-only';
 
 import Image from 'next/image';
+
 import { css } from '@styles/css';
 import { flex, hstack } from '@styles/patterns';
+
 import icon from '../icon.svg';
 
 export function Header() {

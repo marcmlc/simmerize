@@ -1,9 +1,11 @@
 import 'server-only';
 
 import { ReactNode } from 'react';
+
+import { css } from '@styles/css';
+
 import { Footer } from './Footer';
 import { Header } from './Header';
-import { css } from '@styles/css';
 
 type Props = {
   children: ReactNode;

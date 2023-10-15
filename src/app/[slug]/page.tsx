@@ -1,6 +1,7 @@
 import 'server-only';
 
 import { notFound } from 'next/navigation';
+
 import { getRecipes } from '@/api/getRecipes';
 
 export const dynamicParams = false;
