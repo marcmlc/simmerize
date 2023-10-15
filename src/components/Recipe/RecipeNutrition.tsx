@@ -1,5 +1,7 @@
 import 'server-only';
 
+import { useTranslations } from 'next-intl';
+
 import { css } from '@styles/css';
 import { circle, hstack, vstack } from '@styles/patterns';
 
@@ -15,16 +17,18 @@ type Props = {
 };
 
 export function RecipeNutrition({ nutrition = {} }: Props) {
+  const t = useTranslations('Recipe.Nutrition');
+
   return (
     <div className={vstack({ gap: 3, alignItems: 'flex-start', width: 'full' })}>
-      <h3 className={css({ fontSize: 'lg' })}>Valeurs nutritionnelles par portion</h3>
+      <h3 className={css({ fontSize: 'lg' })}>{t('title')}</h3>
       <div className={hstack({ gap: 5, overflowY: 'hidden', width: 'full' })}>
-        <RecipeNutritionPill value={nutrition.calories} label="Calories" />
-        <RecipeNutritionPill value={nutrition.fibres} label="Fibres" />
-        <RecipeNutritionPill value={nutrition.proteines} label="Prot." />
-        <RecipeNutritionPill value={nutrition.glucides} label="Gluc." />
-        <RecipeNutritionPill value={nutrition.sucre} label="Sucre" />
-        <RecipeNutritionPill value={nutrition.matieresGrasses} label="M.G." />
+        <RecipeNutritionPill value={nutrition.calories} label={t('calories')} />
+        <RecipeNutritionPill value={nutrition.fibres} label={t('fiber')} />
+        <RecipeNutritionPill value={nutrition.proteines} label={t('protein')} />
+        <RecipeNutritionPill value={nutrition.glucides} label={t('carbs')} />
+        <RecipeNutritionPill value={nutrition.sucre} label={t('sugar')} />
+        <RecipeNutritionPill value={nutrition.matieresGrasses} label={t('fats')} />
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import 'server-only';
 
+import { useTranslations } from 'next-intl';
+
 import { css } from '@styles/css';
 import { hstack, vstack } from '@styles/patterns';
 
@@ -11,9 +13,11 @@ type Props = {
 };
 
 export function RecipeDirections({ directions }: Props) {
+  const t = useTranslations('Recipe');
+
   return (
     <div className={vstack({ alignItems: 'stretch', gap: '4' })}>
-      <h2 className={css({ fontSize: '3xl', fontWeight: 600 })}>Instructions</h2>
+      <h2 className={css({ fontSize: '3xl', fontWeight: 600, textTransform: 'capitalize' })}>{t('directions')}</h2>
       <div className={vstack({ alignItems: 'stretch', gap: '5' })}>
         {directions.map((direction, index) => (
           <div key={index} className={hstack({ gap: '8' })}>
